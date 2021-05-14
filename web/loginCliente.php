@@ -12,8 +12,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/cssLogin.css" >
     </head>
     <body>
-    <form class="box" action="loginregistrar.php" method="POST">
-        <h1>Iniciar sesión</h1>
+    <form action="loginregistrar.php" method="POST">
+        <h2>Iniciar sesión</h2>
         <input type="text" placeholder="&#128273; Usuario" name="nombre" required>
         <input type="password" placeholder="&#128274; Contraseña" name="contra" required>
         <input type="submit" value="Ingresar" name="btningresar">

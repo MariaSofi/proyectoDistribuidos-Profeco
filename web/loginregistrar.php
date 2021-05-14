@@ -13,7 +13,7 @@ if(isset($_POST["btningresar"]))
 	
 	if($nr==1)
 	{
-		echo "<script>  window.location='index.php' </script>";
+		echo "<script> window.location='index.php' </script>";
 	}else
 	{
 		echo "<script> alert('Usuario no existe'); window.location='loginCliente.php' </script>";
@@ -27,7 +27,7 @@ if(isset($_POST["btnregistrar"]))
 	
 	if(mysqli_query($conn,$sqlgrabar))
 	{
-		echo "<script> window.location='loginCliente.php' </script>";
+		echo "<script>  window.location='loginCliente.php' </script>";
 	}else 
 	{
 		echo "Error: ".$sqlgrabar."<br>".mysql_error($conn);

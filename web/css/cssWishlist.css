@@ -1,0 +1,32 @@
+.detalles{
+    position: relative;
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+html,body{
+  overflow-x: hidden;
+  color:black;
+  font-family:'Opens Sans',helvetica;  
+  height:100%;
+  width:101%;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 90%;
+}
+
+h1{
+    text-align: center;
+    padding: 15px;
+
+}
+
+

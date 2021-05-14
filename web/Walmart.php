@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="stylesheet" href="css/ccsIndex.css" >
 
   <title>Offer + Principal</title>
 
@@ -27,23 +26,24 @@
       <!-- -->  
       <a class="navbar-brand" href="#"></a>
       <img src="img/imgPrincipal.png" alt="" height="50" width="150" />
-      <form action="" method="GET">
-         <input type="text" name="busqueda" required>
-          <input type="submit" value="Buscar" name="enviar">
-        </form>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="agregarProducto.php">Agregar Producto</a>
+            <a class="nav-link" href="agregarProductoAurrera.php">Agregar Producto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="wishlist.php">WishList</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="visualizarReporteLey.php">Reportes</a>
+          <a class="nav-link" href="visualizarReporteWalmart.php">Reportes</a>
           </li>
           
         </ul>
@@ -76,16 +76,50 @@
       </div>
       <!-- /.col-lg-3 -->
 
-      <br>
+      <div class="col-lg-9">
+
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <form action="" method="GET">
+<input type="text" name="busqueda" required> <br>
+<input type="submit" value="Buscar" name="enviar">
+</form>
+<br>
 
 <div>
 
-
+<a href="reporteWalmart.php" class="get-started-btn"  >Mandar Reporte</a>
 
 </div>
 
 <?php
-include_once("conexionBDSupermercado.php");
+include("conexionBDWalmart.php");
+
 if(isset($_GET['enviar'])){
    $busqueda= $_GET['busqueda'];
 
@@ -97,12 +131,14 @@ if(isset($_GET['enviar'])){
        echo $row['precio'].'<br>';
        echo $row['supermercado'].'<br>';
   }
+
 }
 
 ?>
 
 <?php
-include_once("conexionBDAurrera.php");
+include("conexionBDSupermercado.php");
+
 if(isset($_GET['enviar'])){
    $busqueda= $_GET['busqueda'];
 
@@ -114,12 +150,14 @@ if(isset($_GET['enviar'])){
        echo $row['precio'].'<br>';
        echo $row['supermercado'].'<br>';
   }
+
 }
 
 ?>
 
 <?php
-include_once("conexionBDSoriana.php");
+include("conexionBDAurrera.php");
+
 if(isset($_GET['enviar'])){
    $busqueda= $_GET['busqueda'];
 
@@ -131,12 +169,14 @@ if(isset($_GET['enviar'])){
        echo $row['precio'].'<br>';
        echo $row['supermercado'].'<br>';
   }
+
 }
 
 ?>
 
 <?php
-include_once("conexionBDWalmart.php");
+include("conexionBDSoriana.php");
+
 if(isset($_GET['enviar'])){
    $busqueda= $_GET['busqueda'];
 
@@ -148,8 +188,12 @@ if(isset($_GET['enviar'])){
        echo $row['precio'].'<br>';
        echo $row['supermercado'].'<br>';
   }
+
 }
+
 ?>
+
+
 <br><br><br>
 
         <div class="tabla">
@@ -160,8 +204,8 @@ if(isset($_GET['enviar'])){
 		<td width="200px">Precio</td>
 
 	</tr>
-  <?php 
-	include("conexionBDSupermercado.php");
+<?php 
+	include("conexionBDWalmart.php");
 	$query = "SELECT * FROM productos";
 	$result = $mysqli->query($query);
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -170,14 +214,12 @@ if(isset($_GET['enviar'])){
 			<td><?php echo $row['nombre'];?></td>
      <td><?php echo $row['descripcion'];?></td>
 			<td><?php echo $row['precio'];?></td>
-      <td><a href='detalle.php?id=<?php echo $row['id'];?>'>Ver</a></td>
+      <td><a href='detalleWalmart.php?id=<?php echo $row['id'];?>'>Ver</a></td>
 		</tr>
     <?php  
 	}
 ?>
-
 </table>
-<a href="reporteLey.php" class="get-started-btn" >Mandar Reporte</a>
                 </div>
         <!-- /.row -->
 
