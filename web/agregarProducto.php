@@ -36,7 +36,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Reporte</a>
+            <a class="nav-link" href="visualizarReporteLey.php">Reporte</a>
           </li>
           
         </ul>

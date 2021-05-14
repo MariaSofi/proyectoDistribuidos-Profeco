@@ -40,7 +40,7 @@
             <a class="nav-link" href="agregarProductoAurrera.php">Agregar Producto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="wishlist.php">WishList</a>
+            <a class="nav-link" href="wishlistAurrera.php">WishList</a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="visualizarReporteAurrera.php">Reportes</a>
