@@ -34,7 +34,7 @@
             <a class="nav-link" href="wishlist.php">WishList</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Reporte</a>
+            <a class="nav-link" href="visualizarReporteSoriana.php">Reporte</a>
           </li>
           
         </ul>
@@ -84,7 +84,7 @@
 		echo "<tr><td>autor: $descripcion</td></tr>";
 		echo "<tr><td>$precio</td></tr>";
 		echo "</table>";
-		echo "<td><a href='wishlist.php?id=$id'>Eliminar</a></td>";
+		echo "<td><a href='wishlistSoriana.php?id=$id'>Eliminar</a></td>";
 	}
 	?>
 				</table>

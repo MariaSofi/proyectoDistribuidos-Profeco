@@ -34,7 +34,7 @@
             <a class="nav-link" href="wishlist.php">WishList</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Reporte</a>
+            <a class="nav-link" href="visualizarReporteLey.php">Reporte</a>
           </li>
           
         </ul>
@@ -53,7 +53,6 @@
 			<br>
 			<div class="list-group">
 			<a href="index.php" class="list-group-item">Supermercado Ley</a>
-				
 			<a href="Soriana.php" class="list-group-item">Soriana</a>
 			<a href="Aurrera.php" class="list-group-item">Aurrera</a>
 			<a href="Walmart.php" class="list-group-item">Walmart</a>

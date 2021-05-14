@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include("conexionBDSupermercado.php");
+  include_once("conexionBDAurrera.php");
   if(isset($_SESSION['carrito'])){
     $arreglo=$_SESSION['carrito'];
     $encuentro=false;
@@ -27,7 +27,6 @@
          
         $_SESSION['carrito']=$arreglo;
       }
-    
     }
   
 
@@ -50,7 +49,18 @@
                         'Descripcion'=>$descripcion);
       $_SESSION['carrito']=$arreglo;
     }
+
   }
+
+  
+
+  
+  
+  
+
+  
+
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,11 +76,12 @@
 
 <!-- Custom styles for this template -->
 <link href="css/shop-homepage.css" rel="stylesheet">
+
+
 </head>
 <body>
-<header>
 
-  <!-- Navigation -->
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <!-- -->  
@@ -89,14 +100,13 @@
             <a class="nav-link" href="wishlist.php">WishList</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Reporte</a>
+            <a class="nav-link" href="visualizarReporteAurrera.php">Reporte</a>
           </li>
           
         </ul>
       </div>
     </div>
   </nav>
-  
   <div class="container ">
     <div class="row">
 
@@ -117,7 +127,7 @@
     </div>
   </div>
 
-
+<header>
 		<h1>WishList</h1>
 		
     <div class="table">
@@ -127,30 +137,24 @@
           $datos=$_SESSION['carrito'];
           for($i=0;$i<count($datos);$i++){
       ?>
-      <div class="tablita">
          <tr><td>Nombre:<?php echo $datos[$i]['Nombre'];?></td></tr>
          <tr><td>Precio:<?php echo $datos[$i]['Precio'];?></td></tr>
          <tr><td>Descripcion:<?php echo $datos[$i]['Descripcion'];?></td></tr>
-      </div>   
       <?php      
           }
-     } else{
-       echo '<h2> La lista esta vacia</h2>';
-     }
-     
-
+          
+     }  else{
+      echo '<h2> La lista esta vacia</h2>';
+    }
     ?>
-     <a href="index.php">Volver</a>
+     
      </table>
+     <a href="Aurrera.php">Volver</a>
                 </div>
-      </div>  
-      
-      </div>
-   
-    </div>
     
-<!-- Footer -->
-  <div class="footer">
+
+      <!-- Footer -->
+      <div class="footer">
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
@@ -163,10 +167,5 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-			
 </body>
 </html>
-
-
-
-

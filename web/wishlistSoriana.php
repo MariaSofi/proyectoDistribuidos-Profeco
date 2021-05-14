@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include("conexionBDSupermercado.php");
+  include_once("conexionBDSoriana.php");
   if(isset($_SESSION['carrito'])){
     $arreglo=$_SESSION['carrito'];
     $encuentro=false;
@@ -27,7 +27,6 @@
          
         $_SESSION['carrito']=$arreglo;
       }
-    
     }
   
 
@@ -50,7 +49,18 @@
                         'Descripcion'=>$descripcion);
       $_SESSION['carrito']=$arreglo;
     }
+
   }
+
+  
+
+  
+  
+  
+
+  
+
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,8 +80,8 @@
 <body>
 <header>
 
-  <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ <!-- Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <!-- -->  
       <a class="navbar-brand" href="#"></a>
@@ -89,14 +99,14 @@
             <a class="nav-link" href="wishlist.php">WishList</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Reporte</a>
+            <a class="nav-link" href="visualizarReporteSoriana.php">Reporte</a>
           </li>
           
         </ul>
       </div>
     </div>
   </nav>
-  
+
   <div class="container ">
     <div class="row">
 
@@ -117,7 +127,6 @@
     </div>
   </div>
 
-
 		<h1>WishList</h1>
 		
     <div class="table">
@@ -127,29 +136,22 @@
           $datos=$_SESSION['carrito'];
           for($i=0;$i<count($datos);$i++){
       ?>
-      <div class="tablita">
          <tr><td>Nombre:<?php echo $datos[$i]['Nombre'];?></td></tr>
          <tr><td>Precio:<?php echo $datos[$i]['Precio'];?></td></tr>
          <tr><td>Descripcion:<?php echo $datos[$i]['Descripcion'];?></td></tr>
-      </div>   
       <?php      
           }
-     } else{
-       echo '<h2> La lista esta vacia</h2>';
-     }
-     
-
+          
+     }  else{
+      echo '<h2> La lista esta vacia</h2>';
+    }
     ?>
-     <a href="index.php">Volver</a>
+     
      </table>
+     <a href="Aurrera.php">Volver</a>
                 </div>
-      </div>  
-      
-      </div>
-   
-    </div>
-    
-<!-- Footer -->
+
+                      <!-- Footer -->
   <div class="footer">
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -166,7 +168,3 @@
 			
 </body>
 </html>
-
-
-
-
