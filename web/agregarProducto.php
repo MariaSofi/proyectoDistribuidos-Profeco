@@ -57,7 +57,7 @@
       <br>
       <br>
       <div class="list-group">
-        <a href="index.php" class="list-group-item">Supermercado Ley</a>
+        <a href="index.php" class="list-group-item active">Supermercado Ley</a>
      
         <a href="Soriana.php" class="list-group-item">Soriana</a>
         <a href="Aurrera.php" class="list-group-item">Aurrera</a>
@@ -108,7 +108,7 @@
   <div class="footer">
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy;  Sistemas Distribuidos 2021</p>
     </div>
     <!-- /.container -->
   </footer>

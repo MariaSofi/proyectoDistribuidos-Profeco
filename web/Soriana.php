@@ -66,7 +66,7 @@
         <div class="list-group">
           <a href="index.php" class="list-group-item">Supermercado Ley</a>
        
-          <a href="Soriana.php" class="list-group-item">Soriana</a>
+          <a href="Soriana.php" class="list-group-item active">Soriana</a>
           <a href="Aurrera.php" class="list-group-item">Aurrera</a>
           <a href="Walmart.php" class="list-group-item">Walmart</a>
         </div>
